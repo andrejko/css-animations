@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Css animations</title>
+	<link rel="stylesheet" href="dist/app.bundle.css">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md pt-5">
+				<ul class="nav nav-tabs" id="animationsTabs" role="tablist">
+				  	<li class="nav-item">
+				    	<a class="nav-link active" data-toggle="tab" href="#bars" role="tab">Bars</a>
+				  	</li>
+				  	<li class="nav-item">
+				    	<a class="nav-link" data-toggle="tab" href="#circles" role="tab">Circles</a>
+				  	</li>
+				</ul>
+				<div class="tab-content" id="animationsTabsContent">
+				  	<div class="tab-pane show active" id="bars" role="tabpanel">
+				  		<div class="animated-bars mt-5">
+				  			<div class="bar"></div>
+				  			<div class="bar"></div>
+				  			<div class="bar"></div>
+				  			<div class="bar"></div>
+				  			<div class="bar"></div>
+				  		</div>
+				  	</div>
+				 	<div class="tab-pane" id="circles" role="tabpanel">
+				 		<div class="pulse-circles mt-5">
+				 			<div class="circle"></div>
+				 			<div class="circle"></div>
+				 			<div class="circle"></div>
+				 		</div>
+				 	</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="dist/app.bundle.js"></script>
+</body>
+</html>
