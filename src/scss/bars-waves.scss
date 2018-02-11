@@ -1,0 +1,73 @@
+.animated-bars {
+	width: 100px;
+	height: 50px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.animated-bars .bar {
+	background: #ccc;
+	height: 100%;
+	width: 10px;
+	border-radius: 5px;
+	position: relative;
+	bottom: -50%;
+
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-duration: 0.5s;
+}
+
+.animated-bars .bar:nth-of-type(3) {
+	animation-name: bar-wave-full;
+	height: 80px;
+	bottom: -60%;
+}
+
+.animated-bars .bar:nth-of-type(1),
+.animated-bars .bar:nth-of-type(5) {
+	height: 100%;
+	bottom: -50%;
+	animation-name: bar-wave-one-third;
+}
+
+.animated-bars .bar:nth-of-type(2),
+.animated-bars .bar:nth-of-type(4) {
+	height: 90%;
+	bottom: -55%;
+	animation-name: bar-wave-two-thirds;
+}
+
+@keyframes bar-wave-full {
+	0% {
+		height: 80%;
+		bottom: -60%;
+	}
+	100% {
+		height: 30%;
+		bottom: -85%;
+	}
+}
+
+@keyframes bar-wave-one-third {
+	0% {
+		height: 100%;
+		bottom: -50%;
+	}
+	100% {
+		height: 80%;
+		bottom: -60%;
+	}
+}
+
+@keyframes bar-wave-two-thirds {
+	0% {
+		height: 90%;
+		bottom: -55%;
+	}
+	100% {
+		height: 50%;
+		bottom: -75%;
+	}
+}

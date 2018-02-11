@@ -1,0 +1,66 @@
+.pulse-circles {
+	width: 100px;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	.circle {
+		height: 10%;
+		width: 10%;
+		border-radius: 50px;
+		position: absolute;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+		animation-duration: 1s;
+		animation-timing-function: ease-out;
+		&:nth-of-type(1) {
+			background: #4ed47e;
+			z-index: 1;
+			animation-name: circle-scale-full;
+		}
+		&:nth-of-type(2) {
+			background: #25a553;
+			animation-delay: 0.33s;
+			z-index: 2;
+			animation-name: circle-scale-one-third;
+		}
+		&:nth-of-type(3) {
+			background: #0c8236;
+			animation-delay: 0.66s;
+			z-index: 3;
+			animation-name: circle-scale-two-thirds;
+		}
+	}
+}
+
+@keyframes circle-scale-full {
+	0% {
+		height: 10%;
+		width: 10%;
+	}
+	100% {
+		height: 100%;
+		width: 100%;
+	}
+}
+@keyframes circle-scale-one-third {
+	0% {
+		height: 10%;
+		width: 10%;
+	}
+	100% {
+		height: 70%;
+		width: 70%;
+	}
+}
+@keyframes circle-scale-two-thirds {
+	0% {
+		height: 10%;
+		width: 10%;
+	}
+	100% {
+		height: 30%;
+		width: 30%;
+	}
+}
